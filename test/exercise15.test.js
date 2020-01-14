@@ -1,7 +1,9 @@
 var chai = require('chai');
 var assert = chai.assert;
+var formatPeople = function(name, age) {
+  return '# name: ' + name + ', age: ' + age + '\n';
+  };
 
-/** Delete this line and the one at the bottom when you're ready for exercise 7
  
 
     suite('Unit Tests Exercise 15 - Approximation',function(){
@@ -9,13 +11,13 @@ var assert = chai.assert;
       // matches the second argument regular expression.
       test('#match, #notMatch', function() {
         var regex =  /^#\sname\:\s[\w\s]+,\sage\:\s\d+\s?$/;
-        assert.fail(formatPeople('John Doe', 35), regex);
+        assert.match(formatPeople('John Doe', 35), regex);
       });
       test('#match, #notMatch', function() {
         var regex =  /^#\sname\:\s[\w\s]+,\sage\:\s\d+\s?$/;
-        assert.fail(formatPeople('Paul Smith III', 'twenty-four'), regex);
+        assert.notMatch(formatPeople('Paul Smith III', 'twenty-four'), regex);
       });
     })
 
   
-// Delete this line when you're ready for exercise 15 **/
+

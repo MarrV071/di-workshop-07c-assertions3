@@ -18,14 +18,14 @@ var Plane = function() {
 var myCar = new Car();
 var airlinePlane = new Plane();
 
-/** Delete this line and the one at the bottom when you're ready for exercise 17
+
     
     suite('Unit Tests Exercise 17 - Object TypeOf',function(){
       // 17 #typeOf asserts that value’s type is the given string, 
       // as determined by Object.prototype.toString.
       // Use #typeOf or #notTypeOf where appropriate
       test('Object typeof',function(){
-        assert.fail(myCar, 'object');
+        assert.typeOf(myCar, 'object');
       }),
       test('type of Object property 1',function(){
         assert.fail(myCar.model, 'string');
@@ -41,4 +41,4 @@ var airlinePlane = new Plane();
       });
     })
 
-// Delete this line when you're ready for exercise 17 **/
+
